@@ -91,7 +91,7 @@ a {
     color: #222222;
     font-weight: 600;
 }
-
+/*
 .quantity-input {
     display: inline-block;
     border: 1px solid #e6e6e6;
@@ -233,7 +233,7 @@ a {
     .wrap-iten-in-cart .products-cart .product-image img {
         width: 100%;
     }
-} */
+} 
 
 .wrap-iten-in-cart .products-cart .quantity {
     width: 157px;
