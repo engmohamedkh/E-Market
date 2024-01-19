@@ -1,0 +1,27 @@
+.text-hover-danger:hover {
+  color: red;
+  /* Bootstrap's red color */
+}
+
+h5 {
+  font-size: 17px;
+}
+
+.form-control {
+  border: 1px solid red !important;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+button:hover {
+  background-color: red !important;
+  color: white !important;
+  width: 150px !important;
+}
+
+button {
+  width: 150px !important;
+}
