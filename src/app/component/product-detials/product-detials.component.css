@@ -1,0 +1,101 @@
+/* HOME BUTTON */
+.homeButton {
+    text-decoration: none;
+    color: black;
+}
+.homeButton:hover {
+    color: red;
+}
+
+/*Anchor Tags*/
+a {
+    display: block;
+    text-decoration: none;
+    margin-top: 15px;
+    color: black;
+}
+a:hover{
+    color: red;
+}
+
+/*Main Product Image*/
+@media (min-width: 768px) and (max-width:992px) {
+    .myimg {
+        height: 300px;
+        max-width: 300px;
+    }
+}
+
+::ng-deep .carousel-control-prev-icon{
+    background-color: lightgray;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+}
+
+::ng-deep .carousel-control-next-icon{
+    background-color: lightgray;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+}
+
+/* ::ng-deep .carousel-indicators .active {
+    background-color: lightgray;
+} */
+
+
+
+/*Quantity + and - Buttons*/
+.quantityBox {
+    border: 1px lightgrey solid;
+    border-radius: 5px;
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+}
+.quantityButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border-style: none;
+    font-size: 20px;
+}
+
+
+
+/* TABLE */
+table,tr,td,th {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+table{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+/*Popular Products*/
+.hover:hover {
+    border: 1px solid red;
+    border-radius: 5px;
+    font-size: 110%;
+}
+
+
+/*All Buttons*/
+button:hover {
+    background-color: red !important;
+    color: white !important;
+}
+
+
+/*Icons (Delivery-Gift-Return)*/
+i{
+    font-size: 50px;
+    color: rgb(255, 79, 79);
+}
+

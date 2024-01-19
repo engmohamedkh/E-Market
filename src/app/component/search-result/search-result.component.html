@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-12 order-1 order-md-1">
+            <div class="mt-5">
+                <a style="display: inline;" class="homeButton" routerLink="">HOME</a><p style="display: inline;"> / SHOPPING</p>
+            </div>
+        </div>
+        
+
+        <div class="col-12 col-md-3 order-3 order-md-2 mt-5">
+
+<p class="mt-4"><b>CATEGORIES</b></p>
+<hr>
+@for (cat of cats; track $index) {
+<mat-checkbox [(ngModel)]="selectedcats[cat]"
+(click)="onCheckboxClick(cat)" class="example-margin">{{ cat }}</mat-checkbox><br>
+}
+        <p class="mt-4"><b>BRAND</b></p>
+            <hr>
+            @for (brand of brands; track $index) {
+        <mat-checkbox [(ngModel)]="selectedBrands[brand]"
+        (click)="onCheckboxClick(brand)" class="example-margin">{{ brand }}</mat-checkbox><br>
+
+             
+            }
+         
+          
+
+            <p class="mt-4"><b>PRICE</b></p>
+            <hr class="mb-4">
+            <mat-slider class="d-flex justify-content-center" style="width: 90%;" min="0" max="60000" step="10" discrete [displayWith]="formatLabel">
+                <input [(ngModel)]="minPrice" matSliderStartThumb>
+                <input [(ngModel)]="maxPrice" matSliderEndThumb>
+            </mat-slider>
+
+            <div class="d-flex justify-content-center mt-3 mb-3">
+                <button (click)="applyFilter()" class="applyFilter" mat-raised-button color="warn" style="background-color: white; color: red; width: 130px;">Apply Filter</button>
+            </div>
+            <div class="d-flex justify-content-center mb-5">
+                <button (click)="resetFilter()" class="applyFilter" mat-raised-button color="warn" style="background-color: white; color: red; width: 130px;">Reset Filter</button>
+            </div>
+        </div>
+    
+        <div class="col-12 col-md-9 order-2 order-md-3">
+
+            <div class="row">
+                <div class="col mt-3">
+                    <div style="background-color: lightgray; padding: 10px; border-radius: 5px;">
+                        <p style="display: inline; margin-left: 10px;"><b>Products</b></p>
+                        <div ngbDropdown class="d-inline-block">
+                            <button type="button" class="btn btn-outline-danger" id="dropdownBasic1" ngbDropdownToggle style="border: 0px;">
+                                Sort Type
+                            </button>
+                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button ngbDropdownItem (click)="selectOption('default')">Default Sorting</button>
+                                <button ngbDropdownItem (click)="selectOption('highToLow')">Price: High to Low</button>
+                                <button ngbDropdownItem (click)="selectOption('lowToHigh')">Price: Low to High</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <p class="text-center mt-4 mb-0" style="color: gray;">Page: {{page}}</p>
+                @if(prdList.length==0){
+                    <p class="text-center mt-4 mb-0" style="color: gray;">  No Products Found! </p>
+                  
+                }@else{
+                    @for (item of prdList | slice: (page-1) * pageSize : page * pageSize; track item) {
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="d-flex justify-content-center">
+                                <app-cart [prod]="item"></app-cart>
+                            </div>
+                        </div>
+                    }
+                }
+             
+                <div class="col-12 mb-4">
+                    <hr class="mt-5">
+                    <ngb-pagination class="d-flex justify-content-center" [(page)]="page" [pageSize]="pageSize" [collectionSize]="collectionSize" (pageChange)="onPageChange()" aria-label="Default pagination" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

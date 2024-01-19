@@ -1,0 +1,28 @@
+
+nav {
+    background-color: rgb(239, 239, 239) !important;
+    border-top: solid rgba(211, 211, 211, 0.245) 1px;
+}
+
+nav * {
+    color: black;
+}
+
+.navbar-toggler-icon {
+    color: black !important;
+    filter: invert(1);
+}
+
+.active {
+    color: red !important;
+}
+
+a {
+    margin-left: 1.6vw;
+    margin-right: 1.6vw;
+}
+
+i {
+    height: 30px;
+    width: 30px;
+}

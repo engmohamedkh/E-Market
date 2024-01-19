@@ -1,0 +1,104 @@
+/* HOME BUTTON */
+.homeButton {
+    text-decoration: none;
+    color: black;
+}
+.homeButton:hover {
+    color: red;
+}
+
+
+/*Popular Products*/
+.hover:hover {
+    /* border: 1px solid red; */
+    border-radius: 5px;
+    font-size: 110%;
+}
+
+
+/*All Buttons*/
+button:hover {
+    background-color: red !important;
+    color: white !important;
+}
+
+
+/*Anchor Tags*/
+a {
+    display: block;
+    text-decoration: none;
+    margin-top: 15px;
+    color: black;
+}
+a:hover{
+    color: red;
+}
+
+
+/* Apply Filter Button*/
+.applyFilter{
+    color: grey !important;
+}
+.applyFilter:hover{
+    background-color: grey !important;
+    color: white !important;
+}
+
+
+/*Paginator Buttons*/
+.paginator {
+    background-color: white;
+    border-style: none;
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+}
+
+
+/*NGB Paginator Buttons*/
+::ng-deep .active > .page-link{
+    background-color: red !important;
+    border: 1px red solid;
+}
+::ng-deep .page-link{
+    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(253, 13, 13, 0.25);
+    --bs-pagination-hover-color: red;
+    --bs-pagination-focus-color: black;
+    color: red;
+}
+
+
+
+/*Mat Slider*/
+::ng-deep html {
+    --mdc-slider-handle-color: red !important;
+    --mdc-slider-focus-handle-color: red;
+    --mdc-slider-hover-handle-color: red !important;
+    --mdc-slider-active-track-color: red;
+    --mdc-slider-inactive-track-color: grey;
+    --mdc-slider-with-tick-marks-inactive-container-color: red;
+    --mat-mdc-slider-ripple-color: red;
+    --mat-mdc-slider-hover-ripple-color: rgba(181, 63, 63, 0.05);
+    --mat-mdc-slider-focus-ripple-color: rgba(181, 63, 63, 0.2);
+}
+
+
+/*Checkbox*/
+::ng-deep html {
+    --mdc-checkbox-selected-focus-icon-color: red;
+    --mdc-checkbox-selected-hover-icon-color: red;
+    --mdc-checkbox-selected-icon-color: red;
+    --mdc-checkbox-selected-pressed-icon-color: red;
+    --mdc-checkbox-selected-focus-state-layer-color: red;
+    --mdc-checkbox-selected-hover-state-layer-color: red;
+    --mdc-checkbox-selected-pressed-state-layer-color: red;
+}
+
+
+/*SnackBar*/
+::ng-deep html {
+    --mdc-snackbar-container-color: rgba(255, 20, 20, 0.75);;
+    --mdc-snackbar-supporting-text-color: white;
+    --mat-snack-bar-button-color: white;
+}

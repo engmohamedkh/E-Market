@@ -1,0 +1,189 @@
+<div class="container">
+
+	<div class="row">
+		<div class="mt-4">
+			<a class="homeButton" routerLink="" style="display: inline;">HOME</a>
+			<p style="display: inline;"> / DETAILS</p>
+		</div>
+	</div>
+
+	<div class="row justify-content-center" style="padding-bottom: 50px;">
+
+		<div class="col-12 col-md-12 col-lg-4 mt-5 text-center">
+			<ngb-carousel ngbSlide [interval]="4000">
+				<ng-template ngbSlide>
+					<div class="picsum-img-wrapper">
+						<img class="myimg" [src]="product.imgURL1" alt="Random first slide" style="width: 90%;" />
+					</div>
+				</ng-template>
+				<ng-template ngbSlide>
+					<div class="picsum-img-wrapper">
+						<img class="myimg" [src]="product.imgURL2" alt="Random second slide" style="width: 90%;" />
+					</div>
+				</ng-template>
+			</ngb-carousel>
+
+			@if (product.bestSeller){
+			<div class="test">
+				<p class="text-center mt-5"
+					style="color: white; background-color: green; width: 30%; border-radius: 5px;">Bestseller</p>
+			</div>}
+			@if (product.prodsale){
+			<div class="test">
+				<p class="text-center mt-5"
+					style="color: white; background-color: red; width: 30%; border-radius: 5px;">Sale</p>
+			</div>}
+			@if (product.prodnew){
+			<div class="test">
+				<p class="text-center mt-5"
+					style="color: white; background-color: blue; width: 30%; border-radius: 5px;">New</p>
+			</div>}
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-4 mt-5">
+			<p class="text-center" style="font-size: x-large;">{{product.name}}</p>
+			<hr>
+			<ul>
+				<li>{{product.info1}}</li>
+				<li>{{product.info2}}</li>
+				<li>{{product.info3}}</li>
+			</ul>
+			<p style="font-size: 18px;"><b></b></p>
+			<p>Availability: <span style="color: red;"></span></p>
+
+			<div class="quantityBox">
+				<p>Quantity</p>
+				<button class="quantityButton" (click)="minus()">-</button>
+				<span>&nbsp;&nbsp;{{cartquantity}}&nbsp;&nbsp;</span>
+				<button class="quantityButton" (click)="plus()">+</button>
+			</div>
+
+			<br>
+			<div class="d-flex justify-content-center mt-4">
+				<button (click)="addItem(product)" mat-raised-button color="warn"
+					style="background-color: white; color: red; width: 250px;">Add To
+					Cart</button>
+			</div>
+			<div class="mt-5">
+				<mat-accordion>
+					<mat-expansion-panel style="background-color: white;">
+						<mat-expansion-panel-header>
+							<mat-panel-title style="color: red;">
+								Description
+							</mat-panel-title>
+						</mat-expansion-panel-header>
+						<p style="color: black;">{{product.description}}</p>
+					</mat-expansion-panel>
+
+					<mat-expansion-panel style="background-color: white;">
+						<mat-expansion-panel-header>
+							<mat-panel-title style="color: red;">
+								Additional Information
+							</mat-panel-title>
+						</mat-expansion-panel-header>
+						<table class="table table-striped">
+							<tbody>
+								<tr>
+									<th scope="row">Category</th>
+									<td>{{product.category}}</td>
+								</tr>
+								<tr>
+									<th scope="row">Brand</th>
+									<td>{{product.brand}}</td>
+								</tr>
+								<tr>
+									<th scope="row">Colors</th>
+									<td>Black - Silver</td>
+								</tr>
+							</tbody>
+						</table>
+					</mat-expansion-panel>
+				</mat-accordion>
+			</div>
+		</div>
+
+		<div class="col-12 col-md-6 col-lg-4 mt-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-2">
+						<i class="bi bi-truck"></i>
+					</div>
+					<div class="col-10">
+						<p style="margin-left: 15%;"><b>FREE DELIVERY</b></p>
+						<p style="margin-left: 15%;">On Orders Over $99</p>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="container">
+				<div class="row">
+					<div class="col-2">
+						<i class="bi bi-gift"></i>
+					</div>
+					<div class="col-10">
+						<p style="margin-left: 15%;"><b>SPECIAL OFFER</b></p>
+						<p style="margin-left: 15%;">Get a Gift</p>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="container">
+				<div class="row">
+					<div class="col-2">
+						<i class="bi bi-arrow-90deg-left"></i>
+					</div>
+					<div class="col-10">
+						<p style="margin-left: 15%;"><b>RETURN POLICY</b></p>
+						<p style="margin-left: 15%;">15 Days Returnable</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row justify-content-center">
+
+		<div class="mb-4" style="background-color: red; padding: 10px; height: 40px; border-radius: 10px;">
+			<p style="color: white;">POPULAR PRODUCTS</p>
+		</div>
+
+		<div class="row mb-5">
+			<p-carousel [value]="CategoryProds" [numVisible]="3" [numScroll]="1" [showIndicators]="false"
+				[circular]="false" [responsiveOptions]="responsiveOptions">
+				<ng-template let-product pTemplate="product" class="d-flex justify-content-center">
+					<div class="d-flex justify-content-center">
+						<div style="width: 350px;"> 
+							<app-cart [prod]="product"
+							[showAddToCart]="false"></app-cart> 
+						 </div> 
+					</div>
+				</ng-template>
+			</p-carousel>
+		</div>
+
+
+
+
+
+
+
+		<!-- <div class="col-11 mb-5 responsive justify-content-center"
+			data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+			<ngx-slick-carousel class="carousel responsive" #slickModal="slick-carousel" [config]="slideConfig"
+				(init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+				(beforeChange)="beforeChange($event)">
+				<div ngxSlickItem class="slide">
+					<div class="card hover" style="width:15rem; margin-left: 50px;">
+						<img routerLink="" src="../../assets/Images/2.jpg" class="card-img-top img-fluid"
+							style="cursor: pointer;" />
+						<div class="card-body">
+							<a routerLink="" class="card-title">Controller</a>
+							<p class="card-text"><b>{{price|currency:'USD'}}</b></p>
+						</div>
+					</div>
+				</div>
+			</ngx-slick-carousel>
+		</div> -->
+	</div>
+</div>
