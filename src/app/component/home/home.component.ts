@@ -36,10 +36,10 @@ export class HomeComponent implements OnInit  {
   constructor(private productService : ProductsService,private CategoryService : CategoryService,
     private FilteredDataService:FilteredDataService) {}
   images = [
-    "../../../assets/image/1.jpg",
-    "../../../assets/image/2.jpg",
-    "../../../assets/image/3.jpg",
-    "../../../assets/image/5.jpg"
+    "https://firebasestorage.googleapis.com/v0/b/angular-app-e02ea.appspot.com/o/1.jpg?alt=media&token=f9e70c70-d6af-414d-96f7-3542cad1a8c0",
+    "https://firebasestorage.googleapis.com/v0/b/angular-app-e02ea.appspot.com/o/2.jpg?alt=media&token=b860ad7b-a5a3-432b-aff5-1799a54792d4",
+    "https://firebasestorage.googleapis.com/v0/b/angular-app-e02ea.appspot.com/o/3.jpg?alt=media&token=68fbc9db-b26c-415c-a5e6-60bb9f6ddfdc",
+    "https://firebasestorage.googleapis.com/v0/b/angular-app-e02ea.appspot.com/o/5.jpg?alt=media&token=480c02fe-f176-4eeb-a255-3121e5931288"
   ];
 
 
