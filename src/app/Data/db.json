@@ -1,0 +1,141 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Smartphones"
+    },
+    {
+      "id": 2,
+      "name": "Smart Watches"
+    },
+    {
+      "id": 3,
+      "name": "Smart Speakers"
+    }
+  ],
+  "products": [
+    {
+      "id": 101,
+      "name": "iPhone 13",
+      "category_id": 1,
+      "brand": "Apple",
+      "price": 1099.99,
+      "specs": {
+        "display": "6.1 inches",
+        "camera": "Dual 12 MP",
+        "storage": "128 GB"
+      }
+    },
+    {
+      "id": 102,
+      "name": "Samsung Galaxy S21",
+      "category_id": 1,
+      "brand": "Samsung",
+      "price": 899.99,
+      "specs": {
+        "display": "6.2 inches",
+        "camera": "Triple 12 MP",
+        "storage": "256 GB"
+      }
+    },
+    {
+      "id": 103,
+      "name": "Google Pixel 6",
+      "category_id": 1,
+      "brand": "Google",
+      "price": 799.99,
+      "specs": {
+        "display": "6.4 inches",
+        "camera": "Dual 50 MP",
+        "storage": "128 GB"
+      }
+    },
+    {
+      "id": 201,
+      "name": "Apple Watch Series 7",
+      "category_id": 2,
+      "brand": "Apple",
+      "price": 399.99,
+      "specs": {
+        "display": "Always-On Retina",
+        "battery": "Up to 18 hours",
+        "waterResistance": "50 meters"
+      }
+    },
+    {
+      "id": 202,
+      "name": "Samsung Galaxy Watch 4",
+      "category_id": 2,
+      "brand": "Samsung",
+      "price": 349.99,
+      "specs": {
+        "display": "Super AMOLED",
+        "battery": "Up to 40 hours",
+        "waterResistance": "50 meters"
+      }
+    },
+    {
+      "id": 203,
+      "name": "Fitbit Sense",
+      "category_id": 2,
+      "brand": "Fitbit",
+      "price": 299.99,
+      "specs": {
+        "display": "AMOLED",
+        "battery": "Up to 6 days",
+        "waterResistance": "50 meters"
+      }
+    },
+    {
+      "id": 301,
+      "name": "Amazon Echo Dot (4th Gen)",
+      "category_id": 3,
+      "brand": "Amazon",
+      "price": 49.99,
+      "specs": {
+        "assistant": "Alexa",
+        "connectivity": "Bluetooth, Wi-Fi",
+        "audio": "1.6-inch speaker"
+      }
+    },
+    {
+      "id": 302,
+      "name": "Google Nest Audio",
+      "category_id": 3,
+      "brand": "Google",
+      "price": 99.99,
+      "specs": {
+        "assistant": "Google Assistant",
+        "connectivity": "Bluetooth, Wi-Fi",
+        "audio": "75mm woofer, 19mm tweeter"
+      }
+    },
+    {
+      "id": 303,
+      "name": "Apple HomePod Mini",
+      "category_id": 3,
+      "brand": "Apple",
+      "price": 99.99,
+      "specs": {
+        "assistant": "Siri",
+        "connectivity": "Bluetooth, Wi-Fi",
+        "audio": "Full-range driver, dual passive radiators"
+      }
+    },
+    {
+      "name": "ipone",
+      "brand": "ifs",
+      "price": 152,
+      "category_id": "2",
+      "id": 304
+    },
+    {
+      "imgURL": "C:\\fakepath\\cv.jpg",
+      "name": "dg",
+      "brand": "ghg",
+      "price": 85,
+      "category_id": "5",
+      "id": 305
+    }
+  ]
+}

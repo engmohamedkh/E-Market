@@ -1,0 +1,9 @@
+<h3>Products Name</h3>
+@for(i of productsInCart; track i)
+{
+<div>
+    <app-one-product-cart [product]="i" (quantityChangeEvent)="onChildQuantityChange()"
+        (deletecliked)="ondelete($event)"></app-one-product-cart>
+</div>
+<hr style="margin: 40px;">
+}

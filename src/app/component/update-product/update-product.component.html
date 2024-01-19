@@ -1,0 +1,136 @@
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h2 class="mt-5">Update Product</h2>
+
+			<div class="form">
+				<div class="mb-3">
+			
+					<label for="pImg" class="form-label">Product Name</label>
+					<input type="text" class="form-control" id="pImg" placeholder="Name" name="prdimg" [(ngModel)]="productname">
+					<div> @if ( !productnamevalid && productname) {
+						<i class="fas fa-times-circle text-danger"></i>
+						<span style="color: red;">enter correct product name</span>
+						}
+					</div>
+					<div class="mb-3">
+						<label for="pImg" class="form-label">Product Category </label>
+						<select class="form-select" aria-label="Default select example" [(ngModel)]="selectedValue"
+							(change)="onSelectionChange(selectedValue)">
+							@for(value of dropdownValues; track value.name)
+							{
+			
+							<option [value]="value.name">{{ value.name }}</option>
+							}
+						</select>
+			
+					</div>
+					<!-- @if ( !NameValid && userName ) {
+				<p style="color: red;">Name Not Valid</p>
+			  }@else {
+				@if (userName) {
+				  <p style="color: green;">Name Valid</p>
+				}
+			  }-->
+					<div class="mb-3">
+						<label for="pImg" class="form-label">Product Brand</label>
+						<input type="text" class="form-control" id="pImg" placeholder="Brand" name="brand"
+							[(ngModel)]="productbrand">
+						<div> @if ( !productbrandvalid && productbrand) {
+							<i class="fas fa-times-circle text-danger"></i>
+							<span style="color: red;">enter correct product brand</span>
+							}
+						</div>
+					</div>
+			
+			
+					<!-- @if ( !AgeValid && userAge ) {
+				<p style="color: red;">Age Not Valid</p>
+			  }@else {
+				@if (userAge) {
+				  <p style="color: green;">Age Valid</p>
+				}
+			  }-->
+			
+			
+					<div class="mb-3">
+						<label for="pImg" class="form-label">Product Description</label>
+						<input type="textarea" class="form-control" id="pImg" placeholder="Description" name="Description"
+							[(ngModel)]="productdiscrib">
+						<div> @if ( !productdiscribvalid && productdiscrib) {
+							<i class="fas fa-times-circle text-danger"></i>
+							<span style="color: red;">not valid disctription </span>
+							}
+						</div>
+					</div>
+			
+					<div class="mb-3">
+						<label for="pImg" class="form-label">product inspection information 1</label>
+						<input type="text" class="form-control" id="pImg" placeholder="product inspection information" name="brand"
+							[(ngModel)]="info1">
+						<div> @if ( !productinfo1valid && info1) {
+							<i class="fas fa-times-circle text-danger"></i>
+							<span style="color: red;">invalid product inspection information</span>
+							}
+						</div>
+					</div>
+			
+					<div class="mb-3">
+						<label for="pImg" class="form-label">product inspection information 2</label>
+						<input type="text" class="form-control" id="pImg" placeholder="product inspection information" name="brand"
+							[(ngModel)]="info2">
+						<div> @if ( !productinfo2valid && info2) {
+							<i class="fas fa-times-circle text-danger"></i>
+							<span style="color: red;">invalid product inspection information</span>
+							}
+						</div>
+					</div>
+					<div class="mb-3">
+						<label for="pImg" class="form-label">product inspection information 3</label>
+						<input type="text" class="form-control" id="pImg" placeholder="product inspection information" name="brand"
+							[(ngModel)]="info3">
+						<div> @if ( !productinfo3valid && info3) {
+							<i class="fas fa-times-circle text-danger"></i>
+							<span style="color: red;">invalid product inspection information</span>
+							}
+						</div>
+					</div>
+					<div class="mb-3">
+						<label for="pImg" class="form-label">Product Price</label>
+						<input type="number" class="form-control" id="pImg" placeholder="price" name="brand"
+							[(ngModel)]="productprice">
+						<div> @if ( !productpricevalid && !!productprice) {
+							<i class="fas fa-times-circle text-danger"></i>
+							<span style="color: red;">price is Required</span>
+							}
+						</div>
+					</div>
+			
+					<div class="mb-3">
+						<label for="pImg" class="form-label">product Quantity</label>
+						<input type="number" class="form-control" id="pImg" placeholder="Quantity" name="quantity"
+							[(ngModel)]="productquantity">
+						<div> @if ( !productquantityvalid && productquantity) {
+							<i class="fas fa-times-circle text-danger"></i>
+							<span style="color: red;">Product Quantity is required </span>
+							}
+						</div>
+					</div>
+			
+					<div class="mb-3">
+						<label for="fileUpload" class="form-label">first Product Image</label>
+						<input type="file" class="form-control" id="fileUpload" name="prdimg" #upload1>
+						<button class="btn btn-primary mb-3" for="formFileLg" (click)="uploadFile2(upload1)">Upload</button>
+					</div>
+					<div class="mb-3">
+						<label for="fileUpload" class="form-label">Second Product Image</label>
+						<input type="file" class="form-control" id="fileUpload" name="prdimg" #upload2>
+						<button class="btn btn-primary mb-3" for="formFileLg" (click)="uploadFile2(upload2)">Upload</button>
+					</div>
+			
+					<button class="btn btn-primary" [disabled]="!productFormvalid" (click)="Update()"> Update Product</button>
+			
+				</div>
+		</div>
+	</div>
+</div>

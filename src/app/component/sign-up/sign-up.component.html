@@ -1,0 +1,68 @@
+<div class="container-fluid ">
+
+	<div class="row imgrow">
+		<div class="col imgdiv d-flex justify-content-center">
+			<img src="../../../assets/image/ourlogo.png" alt="">
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col d-flex justify-content-center whole">
+			<form [formGroup]="myRegForm" class="form bor">
+
+				<!-- User Name -->
+				<div class="form-group">
+					<input placeholder="User Name" formControlName="name" class="form-control" type="text">
+					@if (!NameValid && myRegForm.get('name')?.touched || nameerror) {
+					<p style="color: red;">Name Not Valid</p>
+					}
+				</div>
+
+				<!-- User Age -->
+				<div class="form-group">
+					<input placeholder="Age" formControlName="age" class="form-control" type="number">
+					@if (!AgeValid && myRegForm.get('age')?.touched || ageerror) {
+					<p class="alert alert-dinger" style="color: red;">Age Not Valid</p>
+					}
+				</div>
+
+				<!-- User Email -->
+				<div class="form-group">
+					<input placeholder="E-mail" formControlName="email" class="form-control" type="text">
+					@if (!EmailValid && myRegForm.get('email')?.touched || emailerror) {
+					<p style="color: red;">E-Mail Not Valid</p>
+					}
+				</div>
+
+				<!-- User Password ! -->
+				<!--<div class="form-group">
+					<input placeholder="Password" formControlName="password" class="form-control" type="password">
+					 @if (!PasswordValid && myRegForm.get('password')?.touched) {
+					<p style="color: red;">Enter a Valid Password</p>
+					} 
+				</div>-->
+
+			    <div class="form-group">
+					  <input formControlName="password" placeholder="Password" class="form-control" type="password">
+					  @if (!PasswordValid && myRegForm.get('password')?.touched || passworderror) {
+						<p style="color: red;">Enter a valid password.</p>
+					  }
+				</div>
+			 
+				<div class="form-group">
+					  <input formControlName="confirmPassword" placeholder="Confirm Password" class="form-control" type="password">
+					  @if (!ConfirmPasswordValid && myRegForm.get('confirmPassword')?.touched ||confirmpassworderror) {
+						<p style="color: red;">not match password.</p>
+					  }
+				</div>
+
+				  <!-------->
+
+				<div class="form-group row justify-content-center">
+					<input class="btn btn-dark btn-block" type="submit" value="Sign Up" (click)="check()" style="width: 150px;">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
