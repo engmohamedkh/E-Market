@@ -1,0 +1,36 @@
+.hover:hover {
+    color: red;
+}
+
+.hov:hover {
+    border: 1px solid lightgray !important;
+    border-radius: 0 !important;
+}
+
+
+.hidde {
+    position: absolute;
+}
+
+.sq-col {
+    border-radius: 2px;
+    background-color: lightcoral;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 8px;
+}
+
+.co1,
+.co2,
+.co3 {
+    width: 70px;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: small;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

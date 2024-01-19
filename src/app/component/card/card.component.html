@@ -1,0 +1,28 @@
+<div class="container pos-con show">
+	<div class="row">
+
+
+		<div *ngIf="hideTimer() && showTimer" class="m-2 d-flex justify-content-start">
+			<div class="sq-col mb-4">
+				<span style="font-size: 30px;">{{days | number : "2.0-0"}}</span> Days:&nbsp;&nbsp;
+				<span style="font-size: 30px;">{{hours | number : "2.0-0"}}</span> Hrs:&nbsp;&nbsp;
+				<span style="font-size: 30px;">{{minutes | number : "2.0-0"}}</span> Mins:&nbsp;&nbsp;
+				<span style="font-size: 30px;">{{seconds | number : "2.0-0"}}</span> Secs
+			</div>
+		</div>
+
+		<!-- <div class="row">
+			<div class="card col-lg-3 col-md-4 col-sm-6 border border-0 hov show pos-con" routerLink="/product/:id"
+				*ngFor="let item of getVisibleDesc$() | async">
+				<img src="../../../assets/image/digital_01.jpg" class="card-img-top card-img-hov" />
+				<div class="card-body">
+					<p class="card-text hover">{{ item }}</p>
+				</div>
+			</div>
+		</div>
+
+		<button class="pos-left" (click)="next()"> >> </button>
+		<button class="pos-right" (click)="prev()"> << </button> -->
+
+	</div>
+</div>

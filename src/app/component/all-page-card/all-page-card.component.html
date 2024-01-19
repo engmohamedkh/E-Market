@@ -1,0 +1,21 @@
+<!-- <p>all-page-card works!</p> -->
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col  ">
+            <div class=" w-75 m-auto my-2">
+                <app-shop-card [clear]="clear" (myevent)="gettotalprice($event)"></app-shop-card>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col  ">
+            <div class=" w-75 m-auto my-2 mb-5">
+                <app-shop-card-summary (clearclicked)="onclear()" [totPrice]="totalPrice"></app-shop-card-summary>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,27 @@
+<div class="card hover d-flex justify-content-center mt-4">
+    <div class="bigcontainer" style="position: relative;">
+        <img (click)="productdetails()" src={{prod.imgURL1}} class="card-img-top img-fluid hover" style="cursor: pointer;"/>
+
+		@if (prod.bestSeller){
+        <div class="test" style="position: absolute; top: 10px; left: 10px;">
+            <p class="test text-center" style="color: white; background-color: green; width: 110%; border-radius: 5px;">Bestseller</p>
+        </div>}
+		@if (prod.prodsale){
+		<div class="test" style="position: absolute; top: 10px; left: 42%;">
+            <p class="test text-center" style="color: white; background-color: red; width: 110%; border-radius: 5px;">Sale</p>
+        </div>}
+		@if (prod.prodnew){
+		<div class="test" style="position: absolute; top: 10px; left: 82%;">
+            <p class="test text-center" style="color: white; background-color: blue; width: 110%; border-radius: 5px;">New</p>
+        </div>}
+
+    </div>
+
+    <div class="card-body">
+        <a (click)="productdetails()" class="card-title" style="cursor: pointer;">{{prod.name}}</a>
+        <p class="card-text"><b>{{prod.price|currency:'USD'}}</b></p>
+        @if (showAddToCart) {
+            <button (click)="addItem(prod)" mat-raised-button color="warn" style="background-color: white; color: red; width: 100%;">Add To Cart</button>
+        }
+    </div>
+</div>

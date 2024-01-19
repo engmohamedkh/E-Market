@@ -1,0 +1,150 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="../../../assets/image/about-us.png" width="100%">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 mt-4">
+            <div class="aboutus-info text-center">
+                <h5 class="box-title" style="font-weight: bolder;">Interesting Fact</h5>
+                <p class="txt-content" style="color: gray;">Inspired by a passion for marketing, our founder, X, started E-Market Store in their garage with a vision to revolutionize the way people shop online.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card m-3 pt-5" style=" color: grey; height: 250px;">
+                <h3 class="text-center" style="color: black; font-size: 50px ;font-weight: bolder;">10,000</h3>
+                <span class="text-center bolder" style="color: black; font-size: 20px ;font-weight: bolder;">Items in
+                    Store</span>
+                <div class="card-body ">
+                    <p class="desc">At E-Market Store, quality is at the core of what we do. We meticulously source and curate our products to guarantee durability, functionality, and style.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card m-3 pt-5" style=" color: grey; height: 250px;">
+                <h3 class="text-center" style="color: black; font-size: 50px ;font-weight: bolder;">90%</h3>
+                <span class="text-center" style="color: black; font-size: 20px ;font-weight: bolder;">Of Our Customers
+                    Come Back</span>
+                <div class="card-body ">
+                    <p class="desc">Your satisfaction is our priority. We actively seek and value customer feedback to continuously improve our services and offerings. </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card m-3 pt-5" style=" color: grey; height: 250px;">
+                <h3 class="text-center" style="color: black; font-size: 50px ;font-weight: bolder;">2 million</h3>
+                <span class="text-center" style="color: black; font-size: 20px ;font-weight: bolder;">Users Monthly</span>
+                <div class="card-body ">
+                    <p class="desc">Don't just take our word for it. Hear what our satisfied customers have to say about their experiences with E-Market Store.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-4">
+            <div class="aboutus-info">
+                <h5 class="box-title" style="font-weight: bolder;">What we really do?</h5>
+                <p class="txt-content" style="color: gray;">We're proud to collaborate with top brands to bring you unique products. Our partnerships with Top Brands ensure a diverse and exciting product lineup.</p>
+            </div>
+            <div class="aboutus-info">
+                <h5 class="box-title" style="font-weight: bolder;">History of the Company</h5>
+                <p class="txt-content" style="color: gray;">Established in 2015, XYZ Store was founded with the mission of providing customers with a seamless online shopping experience for a variety of quality products.</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="aboutus-info">
+                <h5 class="box-title" style="font-weight: bolder;">Our Vision</h5>
+                <p class="txt-content" style="color: gray;">At E-Market Store, we foster a collaborative and innovative culture. Our team values creativity, inclusivity, and a shared passion for e-commerce.</p>
+            </div>
+            <div class="aboutus-info">
+                <h5 class="box-title" style="font-weight: bolder;">Cooperate with Us!</h5>
+                <p class="txt-content" style="color: gray;">Have questions or feedback? Reach out to our friendly customer support team at support.emarketstore.com. Our headquarters are located at 942 Sulphur Springs Road, West Palm Beach, FL.</p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 mt-3">
+            <div class="aboutus-info">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let item of items">
+                        <button style="text-decoration: none; color: red;" class="btn btn-link" type="button"
+                            (click)="toggleCollapse(item.id)">
+                            {{ item.title }}
+                        </button>
+                        <div class="collapse" [ngClass]="{ 'show': !item.isCollapsed }">
+                            <p>{{ item.content }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-5 mb-4 text-center d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center mb-4">
+            <h2 class="title-box team">Our Team</h2>
+        </div>
+        
+        <!-- Team Member 1 -->
+        <div class="col-lg-2">
+            <div class="item">
+                <div class="team-member text-center">
+                    <div class="info">
+                        <h3 class="name">Mohamed Ali</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="col-lg-2">
+            <div class="item">
+                <div class="team-member text-center">
+                    <div class="info">
+                        <h3 class="name">Mariem Mohamed</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="col-lg-2">
+            <div class="item">
+                <div class="team-member text-center">
+                    <div class="info">
+                        <h3 class="name">Mohamed Khaled</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="col-lg-2">
+            <div class="item">
+                <div class="team-member text-center">
+                    <div class="info">
+                        <h3 class="name">Fatma Mahmoud</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Member 5 -->
+        <div class="col-lg-2">
+            <div class="item">
+                <div class="team-member text-center">
+                    <div class="info">
+                        <h3 class="name">Mostafa Ashraf</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
