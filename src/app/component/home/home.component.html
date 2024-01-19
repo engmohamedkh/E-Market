@@ -1,0 +1,137 @@
+
+<div class="container-fluid">
+
+	<!-- <app-slidebar></app-slidebar> -->
+	<div class="row firstrow p-5">
+		<div class="col-12">
+			<h1 style="font-size: 40px; color: white;">Online Shopping Experience Like Never!</h1>
+		</div>
+		<div class="col-12 col-md-4">
+			<p style="color: white;">Dive into a world where innovation knows no bounds. From cutting-edge software development to the latest breakthroughs in artificial intelligence, we curate and deliver the most relevant and exciting tech news, trends, and insights.</p>
+			<button routerLink="/shopping" class="b1" mat-raised-button color="warn" style="background-color: white; color: red; display: block;">Shop Now</button>
+		</div>
+	</div>
+
+	<div class="row d-flex justify-content-center" style="margin-top: 70px;">
+		<ngb-carousel [interval]="3000" [pauseOnHover]="false" [showNavigationIndicators]="false">
+			<ng-template ngbSlide class="d-flex justify-content-center">
+				<div class="picsum-img-wrapper d-flex justify-content-center">
+					<img class="img-fluid" [src]="images[0]" alt="Random first slide" />
+				</div>
+				<div class="carousel-caption">
+					<h1 class="banner">Extra 25% Off For a Limited Time</h1>
+				</div>
+			</ng-template>
+			<ng-template ngbSlide>
+				<div class="picsum-img-wrapper d-flex justify-content-center">
+					<img class="img-fluid" [src]="images[1]" alt="Random second slide" />
+				</div>
+				<div class="carousel-caption">
+					<h1 class="banner">Shop From The Comfort of Your Home</h1>
+				</div>
+			</ng-template>
+			<ng-template ngbSlide>
+				<div class="picsum-img-wrapper d-flex justify-content-center">
+					<img class="img-fluid" [src]="images[2]" alt="Random third slide" />
+				</div>
+				<div class="carousel-caption">
+					<h1 class="banner">Enjoy The Latest Technologies</h1>
+				</div>
+			</ng-template>
+			<ng-template ngbSlide>
+				<div class="picsum-img-wrapper d-flex justify-content-center">
+					<img class="img-fluid" [src]="images[3]" alt="Random third slide" />
+				</div>
+				<div class="carousel-caption">
+					<h1 class="banner">Kid's Toys</h1>
+				</div>
+			</ng-template>
+		</ngb-carousel>
+	</div>
+
+	<div class="col-12 mb-4 p-3" style="border-radius: 5px; background-color: lightgray; margin-top: 70px;">
+		<h4 class="mt-3" style="color: white; font-size: 30px; color: black; font-weight: bolder;">On Sale</h4>
+	</div>
+
+		<app-card></app-card>
+
+
+	<div class="row mb-4">
+		<p-carousel [value]="filterProductsSale" [showIndicators]="false" [numVisible]="3" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+			<ng-template let-product pTemplate="product">
+				<div class="d-flex justify-content-center">
+					<div style="width: 350px;"> 
+						<app-cart [prod]="product"
+						[showAddToCart]="false"></app-cart> 
+					 </div> 
+				</div>
+			</ng-template>
+		</p-carousel>
+
+		<!-- @for (item of items; track item) {
+			<div class="col-6 col-md-3">
+				<app-cart></app-cart>
+			</div>
+		} -->
+	</div>
+
+	<div class="col-12 mb-4 p-3" style="border-radius: 5px; background-color: lightgray; margin-top: 70px;">
+		<h4 class="mt-3" style="color: white; font-size: 30px; color: black; font-weight: bolder;">Latest Products</h4>
+	</div>
+
+
+	<div class="row mb-4">
+		<p-carousel [value]="filterProductsNew" [showIndicators]="false" [numVisible]="3" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+			<ng-template let-product pTemplate="product">
+				<div class="d-flex justify-content-center">
+					<div style="width: 350px;"> 
+						<app-cart [prod]="product"
+						[showAddToCart]="false"></app-cart> 
+					 </div> 
+				</div>
+			</ng-template>
+		</p-carousel>
+	</div>
+
+
+	<div class="col-12 mb-4 p-3" style="border-radius: 5px; background-color: lightgray; margin-top: 70px;">
+		<h4 class="mt-3" style="color: white; font-size: 30px; color: black; font-weight: bolder;">Best Seller</h4>
+	</div>
+
+
+	<div class="row mb-4">
+		<p-carousel [value]="filterProductsBestseller" [showIndicators]="false" [numVisible]="3" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+			<ng-template let-product pTemplate="product">
+				<div class="d-flex justify-content-center">
+					<div style="width: 350px;"> 
+						<app-cart [prod]="product"
+						[showAddToCart]="false"></app-cart> 
+					 </div> 
+				</div>
+			</ng-template>
+		</p-carousel>
+	</div>
+	<div class="col-12 mb-4 p-3" style="border-radius: 5px; background-color: lightgray; margin-top: 70px;">
+		<h4 class="mt-3" style="color: white; font-size: 30px; color: black; font-weight: bolder;">Product Categories</h4>
+	</div>
+	<button *ngFor="let i of category"
+	class="btn b-color"
+	[ngClass]="{ active: activeCategory === i.name }"
+	(click)="setActiveCategory(i.name)">
+	{{ i.name }}
+  	</button>
+
+	<div class="row mb-4">
+		<p-carousel [value]="filterProducts" [showIndicators]="false" [numVisible]="3" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+			<ng-template let-product pTemplate="product">
+				<div class="d-flex justify-content-center">
+					<div style="width: 350px;"> 
+						<app-cart [prod]="product"
+						[showAddToCart]="false"></app-cart> 
+					 </div> 
+				</div>
+			</ng-template>
+		</p-carousel>
+	</div>
+
+</div>

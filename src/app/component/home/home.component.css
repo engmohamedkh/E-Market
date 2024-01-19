@@ -1,0 +1,56 @@
+.b-color
+{
+    background-color: #e6e6e6;
+    border-radius: 0 !important;
+    border-color:black ;
+}
+.b-color:hover,.active
+{
+    background-color: white;
+    border-bottom: none;
+}
+.border
+{
+    border: solid;
+}
+
+
+
+.firstrow {
+    background-color: lightcoral;
+}
+
+button:hover {
+    background-color: red !important;
+    color: white !important;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+.b1 {
+    background-color: white !important;
+    color: black !important;
+}
+.b1:hover {
+    background-color: lightcoral !important;
+    color: white !important;
+}
+
+.carousel-caption {
+    background-color: rgba(211, 211, 211, 0.751);
+    border-radius: 20px;
+    color: black;
+    height: 70px;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        font-size: 14px;
+        color: lightcoral;
+    }
+    .carousel-caption {
+        background-color: transparent;
+    }
+}

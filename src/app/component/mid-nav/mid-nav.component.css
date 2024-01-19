@@ -1,0 +1,127 @@
+.search-container {
+  border: 1px solid red;
+  /* Bootstrap default border color */
+  border-radius: 0.25rem;
+  /* Bootstrap default border radius */
+}
+
+.search-container.border-danger {
+  border-color: red;
+}
+
+.wishlist-cart-icons {
+  margin-top: 10px;
+  /* Adjust margin as needed */
+}
+
+
+
+
+/* Ali */
+.midnav {
+  background-color: rgb(239, 239, 239);
+}
+
+.searchbar {
+  border-radius: 0;
+  height: 45px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.categorybar {
+  border-radius: 0;
+  height: 45px;
+  border-radius: 5px;
+}
+
+.searchbutton {
+  background-color: white;
+  border-radius: 7px;
+  height: 45px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.form-select {
+  font-size: 17px;
+}
+
+.form-select:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+option {
+  border-radius: 0;
+}
+
+.selectpicker {
+  border-radius: 0;
+}
+
+.selectpicker.btn-group .dropdown-toggle {
+  border: 1px solid #ced4da;
+}
+
+.logo {
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 40vw;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .inputspace, .categoryspace, .searchspace {
+    display: block;
+    margin-top: 10px;
+  }
+  .searchbar {
+    margin-right: 5px;
+  }
+}
+@media (max-width: 769px) {
+  .inputspace, .categoryspace, .searchspace {
+    display: block;
+    margin-top: 10px;
+  }
+  .searchbar {
+    margin-right: 5px;
+  }
+}
+
+::ng-deep .mdc-text-field--outlined {
+  height: 45px !important;
+  overflow: visible;
+  background-color: white;
+  border-radius: 0 !important;
+  border-color: red !important;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper {
+  height: auto;
+  flex: auto;
+  border-radius: 0 !important;
+}
+
+::ng-deep .mdc-text-field {
+  border-radius: 0 !important;
+  border-color: red !important;
+}
+
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+
+::ng-deep html {
+  --mdc-outlined-text-field-focus-outline-color: #ced4da !important;
+  --mdc-outlined-text-field-hover-outline-color: #ced4da !important;
+  --mdc-outlined-text-field-outline-color: #ced4da !important;
+}

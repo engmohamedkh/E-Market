@@ -1,0 +1,37 @@
+<div class="container">
+
+    <div class="row d-flex justify-content-center">
+
+        <div class="col-12 col-md-2 d-flex justify-content-center mt-4">
+            <img [src]='product.prod.imgURL1' style="width: 120px;height: 120px;" alt="">
+        </div>
+
+        <div class="col-12 col-md-2   text-center mt-4">
+            <a class="link-to-product" href="#">{{product.prod.name}}</a><br>
+        </div>
+
+        <div class="col-12 col-md-2  text-center mt-4">
+            <p class="price">Price: ${{product.prod.price}}</p>
+        </div>
+
+        <div class="col-12 col-md-2 d-flex justify-content-center mt-4">
+            <div class="qtty">
+                <button (click)="dec()"
+                    style="width: 30px; height: 30px ; border-radius: 30px; background-color: lightgray; color:black">-</button>
+                <span>&nbsp;</span>
+                <span>{{product.quantity}}</span>
+                <span>&nbsp;</span>
+                <button (click)="inc()"
+                    style="width: 30px; height: 30px ; border-radius: 30px; background-color: lightgray; color:black">+</button>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-2 d-flex justify-content-center mt-4">
+            <p class="price">Total Price: ${{product.quantityPrice}}</p>
+        </div>
+
+        <div class="col-12 col-md-2 d-flex justify-content-center mt-4">
+            <button (click)="deletefromcart()">Remove Item</button>
+        </div>
+    </div>
+</div>

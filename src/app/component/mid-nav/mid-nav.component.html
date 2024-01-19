@@ -1,0 +1,52 @@
+<div class="container-fluid midnav">
+
+	<div class="row justify-content-md-start justify-content-center align-items-center g-2 text-center pt-3 pb-3">
+  
+	  <div class="col-12 col-md-3">
+		  <img routerLink="" src="../../../assets/image/ourlogo.png" style="cursor: pointer;" class="logo">
+	  </div>
+
+	  <div class="col-11 col-md-7 d-flex justify-content-center">
+		  <form (ngSubmit)="onSearch()">
+			<div class="input-group align-self-stretch inputspace">
+			  <!-- Search input with Angular Material -->
+			  <mat-form-field appearance="outline" class="searchbar" style="height: 20px; width: 190px;">
+				  <mat-label></mat-label>
+				  <input matInput [(ngModel)]="searchTerm" name="searchTerm" (input)="onSearchChange()" [matAutocomplete]="auto"
+					placeholder="Search..." style="background-color: white; width: 110%; margin-right: 20px;">
+				  <mat-autocomplete #auto="matAutocomplete" style="background-color: white;">
+					<mat-option style="background-color: white;" *ngFor="let result of searchResultCache" (click)="onSelectResult(result)" [value]="result.name">
+					  {{ result.name }}
+					</mat-option>
+				  </mat-autocomplete>
+				</mat-form-field>
+				
+	
+			  <!-- Category dropdown -->
+			  <div class="input-group-append align-self-stretch categoryspace">
+				<select class="form-select form-select-lg categorybar" (change)="onSelectionChange($event)"
+				  name="selectedValue" aria-label="Large select example" style="width: 160px;">
+				  <option value="all" selected>All Categories</option>
+				  <option *ngFor="let value of dropdownValues" [value]="value.name">{{ value.name }}</option>
+				</select>
+			  </div>
+	
+			  <!-- Search buttons icon -->
+			  <div class="input-group-append text-center searchspace" style="width: 40px;">
+				<button mat-stroked-button class="searchbutton">Search</button>
+			  </div>
+	
+			</div>
+		  </form>
+	  </div>
+	   
+
+	  <div class="col-12 col-md-2">
+		<div class="d-flex justify-content-end mt-2">
+			<mat-icon routerLink="card" matBadge={{orderservice.cartCount}} matBadgeColor="warn"
+				style="cursor: pointer;">shopping_cart</mat-icon>
+		</div>
+	</div>
+
+	</div>
+</div>

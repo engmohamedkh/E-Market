@@ -1,0 +1,59 @@
+.custom-card {
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.custom-card a {
+  text-decoration: none;
+  color: #333;
+  /* Default color */
+  transition: color 0.3s ease;
+}
+
+.custom-card:hover {
+  background-color: red;
+}
+
+.custom-card:hover a {
+  color: red;
+}
+
+.text-hover-danger {
+  color: gray;
+  /* Default text color */
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.text-hover-danger:hover {
+  color: #dc3545;
+  /* Red color on hover */
+  text-decoration: none;
+  /* Remove underline on hover */
+}
+
+.fc-info-item {
+  list-style-type: none;
+  text-align: center;
+  color: white;
+  /* Text color */
+}
+
+.wrap-left-info {
+  margin-top: 10px;
+}
+
+
+
+/* Ali */
+.info {
+  background-color: rgba(211, 211, 211, 0.5) !important;
+}
+
+.info * {
+  color: black;
+}
+
