@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-app-e02ea": {
+      "hosting": {
+        "onlineshop": [
+          "angular-app-e02ea"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-app-e02ea"
+  }
+}
